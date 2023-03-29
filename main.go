@@ -5,14 +5,6 @@ import (
 	"gobasic/model"
 )
 
-func Swap(x, y *int) {
-	if (*x >= *y) {
-		aux := *x
-		*x = *y
-		*y = aux
-	}
-}
-
 func main() {
 
 	points := []point.Point{
@@ -27,7 +19,7 @@ func main() {
 	
 	for i, point := range points {
 
-		Swap(&point.X, &point.Y)
+		point.Swap()
 		points[i] = point
 
 	}
